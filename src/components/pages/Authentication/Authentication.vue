@@ -35,7 +35,7 @@
     <div class="l-signup" v-if="signUpVisible">
       <v-form v-model="validSignUp">
         <v-text-field label="FIO"
-                      v-model="newUser.username"
+                      v-model="newUser.FIO"
                       prepend-icon="account_box"
                       :rules="rules"
                       required
@@ -43,7 +43,7 @@
         </v-text-field>
         
         <v-text-field label="E-mail"
-                      v-model="newUser.username"
+                      v-model="newUser.email"
                       prepend-icon="email"
                       :rules="rules"
                       required
@@ -51,7 +51,7 @@
         </v-text-field>
 
           <v-text-field label="phone number"
-                      v-model="newUser.username"
+                      v-model="newUser.phone"
                       prepend-icon="phone"
                       :rules="rules"
                       required
@@ -59,7 +59,7 @@
         </v-text-field>
 
           <v-text-field label="passport"
-                      v-model="newUser.username"
+                      v-model="newUser.passport"
                       prepend-icon="chrome_reader_mode"
                       :rules="rules"
                       required
