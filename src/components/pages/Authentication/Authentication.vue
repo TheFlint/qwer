@@ -9,7 +9,7 @@
     <div class="l-auth">
       <v-form v-model="validLogin">
         <v-text-field label="Username"
-                      v-model="credentials.username"
+                      v-model="credentials.login"
                       prepend-icon="account_box"
                       :rules="rules"
                       required
@@ -17,7 +17,7 @@
         </v-text-field>
 
         <v-text-field label="Password"
-                      v-model="credentials.password"
+                      v-model="credentials.pass"
                       prepend-icon="lock"
                       :rules="rules"
                       :append-icon="loginPasswordVisible ? 'visibility' : 'visibility_off'"
@@ -81,7 +81,7 @@
       </v-form>
     </div>
 
-    <v-snackbar timeout="6000"
+    <v-snackbar timeout=6000
                 bottom="bottom"
                 color="red lighten-1"
                 v-model="snackbar">
@@ -97,20 +97,21 @@
         snackbar: false,
         validLogin: false,
         validSignUp: false,
+
         signUpVisible: false,
         loginPasswordVisible: false,
         signUpPasswordVisible: false,
         rules: [ (value) => !!value || 'This field is required' ],
         credentials: {
           login: '',
-          password: ''
+          pass: ''
         },
         newUser: {
           fio: '',
           email: '',
           passport: '',
           phone: '',
-          password: ''
+          pass: ''
         },
         message: ''
       }
